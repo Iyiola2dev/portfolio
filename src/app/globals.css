@@ -27,26 +27,7 @@
 
 
 @layer utilities {
-  /* Background Images */
-  .bg-gradient-radial {
-    background-image: radial-gradient(var(--tw-gradient-stops));
-  }
-  .bg-gradient-conic {
-    background-image: conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops));
-  }
-
-  /* Border Radius */
-  .rounded-lg {
-    border-radius: var(--radius);
-  }
-  .rounded-md {
-    border-radius: calc(var(--radius) - 2px);
-  }
-  .rounded-sm {
-    border-radius: calc(var(--radius) - 4px);
-  }
-
-  /* Custom Colors */
+  /* ✅ Custom Backgrounds */
   .bg-lightHover {
     background-color: #fcf4ff;
   }
@@ -57,15 +38,15 @@
     background-color: #11001F;
   }
 
-  /* Custom Shadows */
-  .shadow-black {
-    box-shadow: 4px 4px 0 #000;
+  /* ✅ Custom Shadows (renamed so Tailwind doesn't override) */
+  .shadow-outline-black {
+    box-shadow: 5px 5px 0px 0px #000;
   }
-  .shadow-white {
-    box-shadow: 4px 4px 0 #fff;
+  .shadow-outline-white {
+    box-shadow: 5px 5px 0px 0px #fff;
   }
 
-  /* Accordion Animations */
+  /* ✅ Accordion Animations */
   @keyframes accordion-down {
     from { height: 0; }
     to { height: var(--radix-accordion-content-height); }
@@ -75,11 +56,33 @@
     to { height: 0; }
   }
 
+
+  @keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% / 2));
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-pause {
+  animation-play-state: paused;
+}
   .animate-accordion-down {
     animation: accordion-down 0.2s ease-out;
   }
   .animate-accordion-up {
     animation: accordion-up 0.2s ease-out;
+  }
+
+  /* ✅ Debugging Utility */
+  .debug-border {
+    border: 5px solid red;
   }
 }
 

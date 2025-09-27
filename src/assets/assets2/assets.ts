@@ -101,7 +101,7 @@ export interface InfoItem {
   description: string;
 }
 
-export type ToolItem = string;
+export type ToolItem = string | StaticImageData;
 
 // ✅ Data
 export const workData: WorkItem[] = [
@@ -124,10 +124,10 @@ export const infoList: InfoItem[] = [
   { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 5 projects' },
 ];
 
-// export const toolsData: ToolItem[] = [
-//   assets.vscode,
-//   assets.firebase,
-//   assets.mongodb,
-//   assets.figma,
-//   assets.git,
-// ];
+export const toolsData: ToolItem[] = [
+  assets.vscode,
+  assets.firebase,
+  assets.mongodb,
+  assets.figma,
+  assets.git,
+];
