@@ -1,0 +1,36 @@
+import type { Config } from "tailwindcss";
+// import animate from "tailwindcss-animate";
+
+ const config: Config = {
+ darkMode: "class",
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      // backgroundImage: {
+      //   "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+      //   "gradient-conic":
+      //     "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      // },
+      // borderRadius: {
+      //   lg: "var(--radius)",
+      //   md: "calc(var(--radius) - 2px)",
+      //   sm: "calc(var(--radius) - 4px)",
+      // },
+      // colors: {
+      //   lightHover: "#fcf4ff",
+      //   darkHover: "#2a004a",
+      //   darkTheme: "#11001F",
+      // },
+      // boxShadow:{
+      //   "black" : "4px 4px 0 #000",
+      //   "white" : "4px 4px 0 #fff",
+      // }
+    },
+  },
+  plugins: [],
+};
+export default config;

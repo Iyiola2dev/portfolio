@@ -1,0 +1,12 @@
+{
+  "crons": [
+    {
+      "path": "/api/user-predictions/resolve/pending",
+      "schedule": "*/15 * * * *"
+    },
+    {
+      "path": "/api/user-predictions/resolve/pending?windowHours=48",
+      "schedule": "0 5 * * *"
+    }
+  ]
+}

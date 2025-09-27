@@ -25,6 +25,64 @@
   }
 }
 
+
+@layer utilities {
+  /* Background Images */
+  .bg-gradient-radial {
+    background-image: radial-gradient(var(--tw-gradient-stops));
+  }
+  .bg-gradient-conic {
+    background-image: conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops));
+  }
+
+  /* Border Radius */
+  .rounded-lg {
+    border-radius: var(--radius);
+  }
+  .rounded-md {
+    border-radius: calc(var(--radius) - 2px);
+  }
+  .rounded-sm {
+    border-radius: calc(var(--radius) - 4px);
+  }
+
+  /* Custom Colors */
+  .bg-lightHover {
+    background-color: #fcf4ff;
+  }
+  .bg-darkHover {
+    background-color: #2a004a;
+  }
+  .bg-darkTheme {
+    background-color: #11001F;
+  }
+
+  /* Custom Shadows */
+  .shadow-black {
+    box-shadow: 4px 4px 0 #000;
+  }
+  .shadow-white {
+    box-shadow: 4px 4px 0 #fff;
+  }
+
+  /* Accordion Animations */
+  @keyframes accordion-down {
+    from { height: 0; }
+    to { height: var(--radix-accordion-content-height); }
+  }
+  @keyframes accordion-up {
+    from { height: var(--radix-accordion-content-height); }
+    to { height: 0; }
+  }
+
+  .animate-accordion-down {
+    animation: accordion-down 0.2s ease-out;
+  }
+  .animate-accordion-up {
+    animation: accordion-up 0.2s ease-out;
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
