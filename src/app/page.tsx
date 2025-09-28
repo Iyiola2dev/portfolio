@@ -1,4 +1,4 @@
-import { Header, Navbar, About } from "@/components";
+import { Header, Navbar, About, Services } from "@/components";
 // import Image from "next/image";
 
 export default function Home() {
@@ -7,6 +7,10 @@ export default function Home() {
     <Navbar />
     <Header />
     <About />
+    <Services />
+    {/* <Projects /> */}
+    {/* <Contact /> */}
+    {/* <Footer /> */}
   </div>
   );
 }

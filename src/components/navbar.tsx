@@ -11,6 +11,8 @@ import { RxHamburgerMenu } from "react-icons/rx";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+
   return (
     <div>
       <nav className="w-full fixed flex items-center justify-between py-5 px-5 md:px-[5rem] bg-gradient-to-r from-gray-200 via-purple-100 to-blue-100">
