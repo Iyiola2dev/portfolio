@@ -100,9 +100,9 @@
 // };
 "use client";
 
-import Image from "next/image";
+
 import React from "react";
-import { ExternalLink, Eye } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 interface workData {
   title: string;

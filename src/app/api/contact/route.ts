@@ -17,7 +17,17 @@ export async function POST(req: Request) {
       `
     });
     return new Response(JSON.stringify({ success: true, data }), { status: 200 });
-  } catch (err: any) {
-    return new Response(JSON.stringify({ success: false, error: err.message }), { status: 500 });
+ } catch (err: unknown) {
+  if (err instanceof Error) {
+    return new Response(
+      JSON.stringify({ success: false, error: err.message }),
+      { status: 500 }
+    );
   }
+
+  return new Response(
+    JSON.stringify({ success: false, error: "An unknown error occurred" }),
+    { status: 500 }
+  );
+}
 }
