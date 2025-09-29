@@ -15,7 +15,7 @@ export const Navbar = () => {
 
   return (
     <div>
-      <nav className="w-full fixed flex items-center justify-between py-5 px-5 md:px-[5rem] bg-gradient-to-r from-gray-200 via-purple-100 to-blue-100">
+      <nav className="w-full fixed flex items-center justify-between py-5 px-5 md:px-[5rem] bg-gradient-to-r from-gray-200 via-purple-100 to-blue-100 z-50">
         <Link href="#top">
           <Image
             src={logo}
@@ -69,7 +69,7 @@ export const Navbar = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`absolute top-0 right-0 bg-gradient-to-r from-gray-200 via-purple-100 to-blue-100 shadow-lg rounded-lg w-64 z-50 h-screen flex flex-col items-start p-4 gap-4 lg:hidden transition-transform duration-500 text-black
+          className={`absolute top-0 right-0 bg-gradient-to-r from-gray-200 via-purple-100 to-blue-100 shadow-lg z-50 rounded-lg w-64  h-screen flex flex-col items-start p-4 gap-4 lg:hidden transition-transform duration-500 text-black
     ${isOpen ? "translate-x-0" : "translate-x-full"}`}
         >
           <button
