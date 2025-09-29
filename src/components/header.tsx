@@ -4,7 +4,6 @@ import Image from "next/image";
 import React, { useRef } from "react";
 import my_pic from "../assets/my_pic.png";
 import hand from "../assets/hand-icon.png";
-import { IoHandRightOutline } from "react-icons/io5";
 import Link from "next/link";
 import { MdArrowOutward } from "react-icons/md";
 import { BiSolidDownload } from "react-icons/bi";

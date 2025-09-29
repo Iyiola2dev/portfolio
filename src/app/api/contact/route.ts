@@ -1,4 +1,4 @@
-import { Resend } from 'resend';
+import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -6,7 +6,7 @@ export async function POST(req: Request) {
   const formData = await req.json();
   try {
     const data = await resend.emails.send({
-      from: 'iyioladan11@gmail.com',
+      from: 'onboarding@resend.dev', 
       to: 'iyiolad21@gmail.com',
       subject: 'New Booking Request',
       text: `
@@ -17,17 +17,11 @@ export async function POST(req: Request) {
       `
     });
     return new Response(JSON.stringify({ success: true, data }), { status: 200 });
- } catch (err: unknown) {
-  if (err instanceof Error) {
-    return new Response(
-      JSON.stringify({ success: false, error: err.message }),
-      { status: 500 }
-    );
+  } catch (err: unknown) {
+    let message = "Unknown error";
+    if (err instanceof Error) {
+      message = err.message;
+    }
+    return new Response(JSON.stringify({ success: false, error: message }), { status: 500 });
   }
-
-  return new Response(
-    JSON.stringify({ success: false, error: "An unknown error occurred" }),
-    { status: 500 }
-  );
-}
 }
