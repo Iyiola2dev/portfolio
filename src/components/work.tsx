@@ -115,6 +115,24 @@ interface workData {
 export const Work = () => {
   const workInfo: workData[] = [
     {
+      title: "Boomscore Ai",
+      description:
+        "A comprehensive platform for sport prediction done by Ai this app is my lastest complex work.",
+      bgImage:
+        "https://res.cloudinary.com/dtlejpoxq/image/upload/v1768490335/zanzibar/79a3da72-096d-4b42-90cd-44a6dc7ae4e7.png",
+      link: "https://www.boomscore.ai/",
+      tags: [
+        "Ai Sport Prediction App",
+        "Next.js",
+        "Tailwind CSS",
+        "TypeScript",
+        "PostgreSQL",
+        "OpenAI API",
+        "Nest js",
+       
+      ],
+    },
+    {
       title: "Altan Infinity",
       description:
         "A comprehensive platform for shoe repairs and customization with modern e-commerce features.",

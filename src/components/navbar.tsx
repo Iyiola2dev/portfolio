@@ -51,9 +51,9 @@ export const Navbar = () => {
             </li> */}
         </ul>
         <div className=" flex items-center gap-4">
-          <button className="text-black  text-xl py-2.5 px-4 rounded-full cursor-pointer flex items-center gap-2  transition">
+          {/* <button className="text-black  text-xl py-2.5 px-4 rounded-full cursor-pointer flex items-center gap-2  transition">
             <IoMoonOutline />
-          </button>
+          </button> */}
           <button className="text-black hidden lg:flex py-2.5 px-10 rounded-full border border-gray-500 cursor-pointer  items-center gap-2  transition">
             <h2>Contact</h2>
             <MdArrowOutward />
